@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <div align="center"><tittle>Formulario generado para conocer el estado de salud actual de las personas que viven en Manizales
+            ante la pandemia por el Covid-19.</tittle></div>
+    </head>
+
+    <body bgcolor="silver">
+        <div align="center"><p>A continuación encontrará un formulario el cual nos permitirá analizar el estado de salud en el que usted se encuentra,
+            <br>por favor diligencie cada uno de los campos solicitados por el sistema.
+        </p></div>
+        
+        <form action="http://localhost/form/php/form.php" method="POST">
+            <div align="center"><input type="image" src="image/Covid-19.jpg"></div>
+            <fieldset>
+                <legend>Datos personales:</legend>
+            <label for="nombres">Nombres:</label><br>
+            <input type="text" id="nombres" name="nombres" required><br>
+            <label for="apellidos">Apellidos:</label><br>
+            <input type="text" id="apellidos" name="apellidos" required><br>
+            
+            <br><label for="fecha">Fecha de nacimiento:</label><br>
+            <input type="date" id="fecha" name="fecha" required><br>
+            
+            <br><label for="phone">Número de contacto:</label><br>
+            <input type="tel" id="phone" name="phone" maxlength="10" 
+            placeholder="3123707468" pattern="[0-9]{10}"><br>
+
+            <br><label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required>
+
+            <p>Seleccione su tipo de género:</p>
+            <input type="radio" id="gender" name="gender" value="masculino">
+            <label for="gender">Masculino</label><br>
+            <input type="radio" id="gender" name="gender" value="femenino">
+            <label for="gender">Femenino</label><br>
+            <input type="radio" id="gender" name="gender" value="otro">
+            <label for="gender">Otro</label><br>
+            
+            <br><label for="quantity">Seleccione la cantidad de personas que viven en su hogar:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="7"><br>
+
+            <br><label for="comuna">Seleccione la comuna en la que habita:</label>
+            <select id="comuna" name="comuna">
+            <option value="atardeceres">Atardeceres</option>
+            <option value="estación">Estación</option>
+            <option value="san josé">San José</option>
+            <option value="ciudadela del norte">Ciudadela del norte</option>
+            <option value="la fuente">La Fuente</option>
+            <option value="tesorito">Tesorito</option>
+            <option value="cumanday">Cumanday</option>
+            <option value="la macarena">La Macarena</option>
+            <option value="universitaria">Universitaria</option>
+            <option value="ecoturístico cerro de oro">Ecoturìstico Cerro de Oro</option>
+            <option value="Palogrande">Palogrande</option>
+            </select>
+            </fieldset>
+
+            <p>por favor marque las casillas si ha presentado alguno de los síntomas que se muestran a continuación:</p>
+            <input type="checkbox" id="sintoma" name="sintoma" value="tos">
+            <label for="sintoma"> Tos</label><br>
+            <input type="checkbox" id="sintoma" name="sintoma" value="fiebre">
+            <label for="sintoma"> Fiebre</label><br>
+            <input type="checkbox" id="sintoma" name="sintoma" value="respiración">
+            <label for="sintoma"> Dificultad en la respiración</label><br>
+            <input type="checkbox" id="sintoma" name="sintoma" value="garganta">
+            <label for="sintoma"> Dolor de garganta</label><br>
+            <input type="checkbox" id="sintoma" name="sintoma" value="ninguno">
+            <label for="sintoma"> Ningún síntoma de los anteriores</label><br>
+
+            <p>por favor marque las casillas si ha sido diagnosticado por alguna de las siguientes enfermedades:</p>
+            <input type="checkbox" id="enfermedad" name="enfermedad" value="asma">
+            <label for="enfermedad"> Asma</label><br>
+            <input type="checkbox" id="enfermedad" name="enfermedad" value="diabetes">
+            <label for="enfermedad"> Diabetes</label><br>
+            <input type="checkbox" id="enfermedad" name="enfermedad" value="cancer">
+            <label for="enfermedad"> Cancer</label><br>
+            <input type="checkbox" id="enfermedad" name="enfermedad" value="tuberculosis">
+            <label for="enfermedad"> Tuberculosis</label><br>
+            <input type="checkbox" id="enfermedad" name="enfermedad" value="ninguna">
+            <label for="enfermedad"> Ninguna de las anteriores</label><br>
+
+            <br><input type="submit" value="Enviar Respuesta">
+        </form>
+    </body>
+</html>
